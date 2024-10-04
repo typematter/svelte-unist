@@ -1,0 +1,1 @@
+export const UNIST_CONTEXT_TOKEN = Symbol('UNIST_CONTEXT_TOKEN');
