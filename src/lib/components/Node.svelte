@@ -5,17 +5,13 @@
 
 	let node: import('unist').Node = $props();
 
-	const { components } = getUnistContext();
+	const { components = {} } = getUnistContext();
 
-	let Component = $derived.by(() => {
-		const { type } = node;
-
-		if (type in components) {
-			return components[type as keyof typeof components] as import('svelte').Component<
-				import('unist').Node
-			>;
-		}
-	});
+	let Component = $derived(
+		components[node.type as keyof typeof components] as import('svelte').Component<
+			import('unist').Node
+		>
+	);
 </script>
 
 {#if Component}
