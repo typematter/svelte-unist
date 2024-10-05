@@ -1,3 +1,4 @@
 import type { Components } from '../types/components.js';
-declare const defaultComponents: Components;
+import type { Node } from 'unist';
+declare const defaultComponents: Components<Node>;
 export default defaultComponents;
