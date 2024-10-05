@@ -7,7 +7,15 @@
 
 	const { components } = getUnistContext();
 
-	let Component = $derived(components[node.type]);
+	let Component = $derived.by(() => {
+		const { type } = node;
+
+		if (type in components) {
+			return components[type as keyof typeof components] as import('svelte').Component<
+				import('unist').Node
+			>;
+		}
+	});
 </script>
 
 {#if Component}
