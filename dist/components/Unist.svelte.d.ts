@@ -1,5 +1,5 @@
-import type { UnistContext } from '../types/unist-context.js';
+import type { UnistProps } from '../types/unist-props.js';
 declare const Unist: import("svelte").Component<{
     ast: import("unist").Node;
-} & Partial<UnistContext>, {}, "">;
+} & UnistProps, {}, "">;
 export default Unist;
