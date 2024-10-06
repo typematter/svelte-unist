@@ -1,3 +1,3 @@
-import type { UnistContext } from '../types/unist-context.js';
-declare const _default: () => Partial<UnistContext>;
+import type { Context } from '../types/unist.js';
+declare const _default: () => Partial<Context>;
 export default _default;
