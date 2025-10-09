@@ -1,3 +1,4 @@
-export { getUnistContext } from './get-unist-context.js';
-export { default as Node } from './node.svelte';
-export { default as Unist } from './unist.svelte';
+import { getUnistContext } from './get-unist-context.js';
+import { default as Node } from './node.svelte';
+import { default as Root } from './unist.svelte';
+export { getUnistContext as getContext, Node, Root };
