@@ -1,9 +1,9 @@
 <script lang="ts">
-	import getUnistContext from '../contexts/get-unist-context.js';
 	import { isLiteral, isParent } from '@accuser/unist-util-type-guards';
-	import Node from './Node.svelte';
+	import { getUnistContext } from './get-unist-context.js';
+	import Node from './node.svelte';
 
-	let node: import('unist').Node = $props();
+	let { node }: { node: import('unist').Node } = $props();
 
 	const { components = {} } = getUnistContext();
 
@@ -17,5 +17,5 @@
 {#if Component}
 	<Component {...node} />
 {:else if isParent(node)}{#each node.children as child}<Node
-			{...child}
+			node={child}
 		/>{/each}{:else if isLiteral(node)}{node.value}{/if}

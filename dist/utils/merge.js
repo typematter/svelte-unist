@@ -1,4 +1,4 @@
-const isObject = (item) => item !== null && typeof item === 'object' && !Array.isArray(item);
+const isObject = (item) => item !== undefined && item !== null && typeof item === 'object' && !Array.isArray(item);
 const merge = (...objects) => objects.reduce((prev, curr) => {
     Object.keys(curr).forEach((key) => {
         const resultValue = prev[key];
