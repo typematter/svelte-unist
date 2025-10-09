@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Unist from '$lib/components/Unist.svelte';
+	import { Unist } from '$lib/components/unist/index.js';
 	import type { PageData } from './$types.js';
 
 	let { data }: { data: PageData } = $props();
