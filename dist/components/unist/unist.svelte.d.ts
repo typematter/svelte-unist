@@ -12,8 +12,7 @@ export interface UnistContext {
 }
 type $$ComponentProps = {
     ast: import('unist').Node;
-    components?: Partial<Components>;
-};
+} & Partial<UnistContext>;
 declare const Unist: import("svelte").Component<$$ComponentProps, {}, "">;
 type Unist = ReturnType<typeof Unist>;
 export default Unist;

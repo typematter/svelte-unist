@@ -14,8 +14,7 @@
 	import Node from './node.svelte';
 	import { setUnistContext } from './set-unist-context.js';
 
-	let { ast, ...context }: { ast: import('unist').Node; components?: Partial<Components> } =
-		$props();
+	let { ast, ...context }: { ast: import('unist').Node } & Partial<UnistContext> = $props();
 
 	setUnistContext(context);
 </script>
