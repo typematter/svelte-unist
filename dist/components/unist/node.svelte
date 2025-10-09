@@ -8,14 +8,14 @@
 	const { components = {} } = getUnistContext();
 
 	let Component = $derived(
-		components[node.type as keyof typeof components] as import('svelte').Component<
-			import('unist').Node
-		>
+		components[node.type as keyof typeof components] as import('svelte').Component<{
+			node: import('unist').Node;
+		}>
 	);
 </script>
 
 {#if Component}
-	<Component {...node} />
+	<Component {node} />
 {:else if isParent(node)}{#each node.children as child}<Node
 			node={child}
 		/>{/each}{:else if isLiteral(node)}{node.value}{/if}
