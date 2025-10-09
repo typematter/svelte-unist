@@ -1,7 +1,7 @@
 type Mergeable = { [key: string]: unknown };
 
 const isObject = (item: unknown): item is Mergeable =>
-	item !== null && typeof item === 'object' && !Array.isArray(item);
+	item !== undefined && item !== null && typeof item === 'object' && !Array.isArray(item);
 
 const merge = (...objects: Mergeable[]): Mergeable =>
 	objects.reduce((prev, curr) => {
@@ -12,7 +12,7 @@ const merge = (...objects: Mergeable[]): Mergeable =>
 			if (isObject(resultValue) && isObject(objValue)) {
 				prev[key] = merge(resultValue, objValue);
 			} else if (isObject(objValue)) {
-				prev[key] = merge({}, objValue as any);
+				prev[key] = merge({}, objValue);
 			} else {
 				prev[key] = objValue;
 			}
