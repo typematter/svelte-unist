@@ -1,10 +1,8 @@
 <script lang="ts">
-	import * as Unist from '$lib/components/unist/index.js';
-	import type { PageData } from './$types.js';
+	import { Unist } from '$lib/components/unist/index.js';
+	import { u } from 'unist-builder';
 
-	let { data }: { data: PageData } = $props();
-
-	let { ast } = $derived(data);
+	let ast = u('root', [u('text', 'Hello, World!')]);
 </script>
 
-<Unist.Root {ast} />
+<Unist {ast} />
