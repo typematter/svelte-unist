@@ -1,5 +1,5 @@
 import { getContext } from 'svelte';
-import { UNIST_CONTEXT_SYMBOL } from './unist-context.symbol.js';
-import type { UnistContext } from './unist.svelte';
+import { CONTEXT_SYMBOL } from './context.symbol.js';
+import type { UnistContext } from './unist-context.js';
 
-export const getUnistContext = () => getContext<Partial<UnistContext>>(UNIST_CONTEXT_SYMBOL) ?? {};
+export const getUnistContext = () => getContext<UnistContext>(CONTEXT_SYMBOL);
