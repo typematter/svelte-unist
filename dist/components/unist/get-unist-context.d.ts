@@ -1,2 +1,2 @@
-import type { UnistContext } from './unist.svelte';
-export declare const getUnistContext: () => Partial<UnistContext>;
+import type { UnistContext } from './unist-context.js';
+export declare const getUnistContext: () => UnistContext;

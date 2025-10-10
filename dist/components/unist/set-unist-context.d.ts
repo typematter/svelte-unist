@@ -1,4 +1,2 @@
-import type { UnistContext } from './unist.svelte';
-export declare const setUnistContext: (context: Partial<UnistContext>) => {
-    [key: string]: unknown;
-};
+import type { UnistContext } from './unist-context.js';
+export declare const setUnistContext: (context: UnistContext) => UnistContext;
