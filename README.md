@@ -8,6 +8,12 @@ Add the `@accuser/svelte-unist` package dependency to your [Svelte](https://svel
 
 ```sh
 npm install --save-dev @accuser/svelte-unist
+
+# or
+yarn add --dev @accuser/svelte-unist
+
+# or
+pnpm add --save-dev @accuser/svelte-unist
 ```
 
 ## Usage
@@ -36,4 +42,4 @@ npm test
 
 ## Copyright
 
-Copyrigth &copy; 2024 [Matthew Gibbons](https://github.com/accuser)
+Copyright &copy; 2025 [Matthew Gibbons](https://github.com/accuser)
