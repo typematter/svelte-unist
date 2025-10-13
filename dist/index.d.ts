@@ -1,1 +1,1 @@
-export * from './components/unist/index.js';
+export * from './components/index.js';
