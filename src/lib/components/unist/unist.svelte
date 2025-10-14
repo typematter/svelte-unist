@@ -3,9 +3,9 @@
 	import { setUnistContext } from './set-unist-context.js';
 	import type { UnistContext } from './unist-context.js';
 
-	let { ast, ...context }: { ast: import('unist').Node } & UnistContext = $props();
+	let context: UnistContext = $props();
 
-	setUnistContext(context);
+	let { ast } = setUnistContext(context);
 </script>
 
 <Node node={ast} />
