@@ -4,16 +4,16 @@ Transform [Unist](https://github.com/syntax-tree/unist) into Svelte components.
 
 ## Installing
 
-Add the `@accuser/svelte-unist` package dependency to your [Svelte](https://svelte.dev) / [SvelteKit](https://kit.svelte.dev) project:
+Add the `@typematter/svelte-unist` package dependency to your [Svelte](https://svelte.dev) / [SvelteKit](https://kit.svelte.dev) project:
 
 ```sh
-npm install --save-dev @accuser/svelte-unist
+npm install --save-dev @typematter/svelte-unist
 
 # or
-yarn add --dev @accuser/svelte-unist
+yarn add --dev @typematter/svelte-unist
 
 # or
-pnpm add --save-dev @accuser/svelte-unist
+pnpm add --save-dev @typematter/svelte-unist
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ pnpm add --save-dev @accuser/svelte-unist
 
 ```svelte
 <script>
-	import { Unist } from '@accuser/svelte-unist';
+	import { Unist } from '@typematter/svelte-unist';
 
 	const ast = { type: 'root', children: [{ type: 'text', value: 'Hello, World!' }] };
 </script>
