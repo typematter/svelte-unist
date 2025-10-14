@@ -4,8 +4,6 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"bradlc.vscode-tailwindcss",
-				"cloudflare.cloudflare-workers-bindings-extension",
 				"dbaeumer.vscode-eslint",
 				"esbenp.prettier-vscode",
 				"ms-vscode.vscode-typescript-next",
