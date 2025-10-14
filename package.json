@@ -1,5 +1,5 @@
 {
-	"name": "@accuser/svelte-unist",
+	"name": "@typematter/svelte-unist",
 	"version": "0.5.0",
 	"private": false,
 	"license": "MIT",
@@ -13,13 +13,13 @@
 		"svelte",
 		"sveltekit"
 	],
-	"homepage": "https://github.com/accuser/svelte-unist",
+	"homepage": "https://github.com/typematter/svelte-unist",
 	"bugs": {
-		"url": "https://github.com/accuser/svelte-unist/issues"
+		"url": "https://github.com/typematter/svelte-unist/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/accuser/svelte-unist.git"
+		"url": "git+https://github.com/typematter/svelte-unist.git"
 	},
 	"scripts": {
 		"dev": "vite dev",
