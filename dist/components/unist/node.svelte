@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { isLiteral, isParent } from '@accuser/unist-util-type-guards';
-	import { getUnistContext } from './get-unist-context.js';
 	import Node from './node.svelte';
-	import type { UnistContext } from './unist-context.js';
+	import { getUnistContext, type UnistContext } from './unist-context.js';
 
 	let {
 		context = getUnistContext(),

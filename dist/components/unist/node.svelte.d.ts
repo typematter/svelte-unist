@@ -1,5 +1,5 @@
 import Node from './node.svelte';
-import type { UnistContext } from './unist-context.js';
+import { type UnistContext } from './unist-context.js';
 type $$ComponentProps = {
     context?: UnistContext;
     node: import('unist').Node;

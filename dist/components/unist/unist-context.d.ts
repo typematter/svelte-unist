@@ -4,3 +4,4 @@ export interface UnistContext {
     components?: Components;
     onerror?: (error: unknown, reset: () => void) => void;
 }
+export declare const getUnistContext: () => UnistContext, setUnistContext: (context: UnistContext) => UnistContext;
