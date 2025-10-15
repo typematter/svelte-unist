@@ -1,3 +1,4 @@
+import { createContext } from 'svelte';
 import type { Components } from './components.js';
 
 export interface UnistContext {
@@ -5,3 +6,5 @@ export interface UnistContext {
 	components?: Components;
 	onerror?: (error: unknown, reset: () => void) => void;
 }
+
+export const [getUnistContext, setUnistContext] = createContext<UnistContext>();

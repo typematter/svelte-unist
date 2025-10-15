@@ -1,1 +1,0 @@
-export const CONTEXT_SYMBOL = Symbol('UNIST_CONTEXT_SYMBOL');
