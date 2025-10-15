@@ -5,7 +5,7 @@
 
 	let context: UnistContext = $props();
 
-	let { ast } = setUnistContext(context);
+	setUnistContext(context);
 </script>
 
-<Node node={ast} />
+<Node {context} node={context.ast} />
