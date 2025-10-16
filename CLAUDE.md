@@ -33,6 +33,7 @@ The architecture is designed so this package provides the foundational rendering
 ## Development Commands
 
 ### Core Commands
+
 - **Development server**: `pnpm dev` - Start the Vite dev server
 - **Build**: `pnpm build` - Build the project and package it (runs `vite build && pnpm run package`)
 - **Package**: `pnpm package` - Create the distributable package (runs `svelte-kit sync && svelte-package && publint`)
@@ -43,6 +44,7 @@ The architecture is designed so this package provides the foundational rendering
 - **Format**: `pnpm format` - Auto-format code with Prettier
 
 ### Important Notes
+
 - This project uses **pnpm** as the package manager
 - The build process automatically runs the package step
 - Tests use Vitest with jsdom environment and @testing-library/jest-dom matchers
@@ -77,9 +79,9 @@ The library centers around a context-based rendering system that recursively ren
    - **Context Extension Pattern**: The `UnistContext` interface can be augmented by specialized packages to add domain-specific functionality. For example, `@typematter/svelte-mdast` extends it with a `getDefinition` function used by `ImageReference` and `LinkReference` components:
      ```typescript
      declare module '@typematter/svelte-unist' {
-         interface UnistContext {
-             getDefinition?: ReturnType<typeof definitionBuilder>;
-         }
+     	interface UnistContext {
+     		getDefinition?: ReturnType<typeof definitionBuilder>;
+     	}
      }
      ```
 
