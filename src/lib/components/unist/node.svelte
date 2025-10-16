@@ -24,13 +24,17 @@
 	<svelte:boundary onerror={context.onerror}>
 		<Component {node} />
 		{#snippet failed(error)}
-			{#if isParent(node)}{#each node.children as child}<Node
+			{#if isParent(node)}{#each node.children as child (child)}<Node
 						{context}
 						node={child}
-					/>{/each}{:else if isLiteral(node)}{node.value}{:else}{@html `<!-- Error rendering ${node.type}: ${error instanceof Error ? error.message : String(error)} -->`}{/if}
+					/>{/each}{:else if isLiteral(node)}{node.value}{:else}{console.warn(
+					`Unist.Node: error rendering ${node.type}: ${error instanceof Error ? error.message : String(error)}`
+				)}{/if}
 		{/snippet}
 	</svelte:boundary>
-{:else if isParent(node)}{#each node.children as child}<Node
+{:else if isParent(node)}{#each node.children as child (child)}<Node
 			{context}
 			node={child}
-		/>{/each}{:else if isLiteral(node)}{node.value}{:else}{@html `<!-- Unknown node type: ${node.type} -->`}{/if}
+		/>{/each}{:else if isLiteral(node)}{node.value}{:else}{console.warn(
+		`Unist.Node: unknown node type: ${node.type}`
+	)}{/if}
